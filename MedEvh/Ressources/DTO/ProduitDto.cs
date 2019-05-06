@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ressources.DTO
 {
-    public class ProduitDto
+    public class ProduitModel
     {
         public int Id { get; set; }
         public string Libelle { get; set; }

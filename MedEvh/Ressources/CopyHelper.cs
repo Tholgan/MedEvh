@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Ressources.DTO;
+﻿using Ressources.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,9 +8,9 @@ namespace MedEvh.Ressources
     public static class CopyHelper
     {
 
-        public static ProduitDto ToDtoProduit(DataTable dataTable)
+        public static ProduitModel ToDtoProduit(DataTable dataTable)
         {
-            ProduitDto dtoProduit = new ProduitDto();
+            ProduitModel dtoProduit = new ProduitModel();
             DataRowCollection rows = dataTable.Rows;
             DataColumnCollection columns = dataTable.Columns;
             
@@ -23,13 +22,13 @@ namespace MedEvh.Ressources
             return dtoProduit;
         }
 
-        public static List<ProduitDto> ToListDtoProduit(DataTable dataTable)
+        public static List<ProduitModel> ToListDtoProduit(DataTable dataTable)
         {
-            List<ProduitDto> listDtoProduit = new List<ProduitDto>();
+            List<ProduitModel> listDtoProduit = new List<ProduitModel>();
             DataRowCollection rows = dataTable.Rows;
             for (int i = 0; i < rows.Count; i++)
             {
-                ProduitDto produitDto = new ProduitDto();
+                ProduitModel produitDto = new ProduitModel();
                 produitDto.Id = Convert.ToInt32(rows[i]["idProduit"]);
                 produitDto.Libelle = rows[i]["libelleProduit"].ToString();
                 produitDto.PrixHt = Convert.ToSingle(rows[i]["prixHtProduit"]);
