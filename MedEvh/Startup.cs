@@ -22,6 +22,13 @@ namespace MedEvh
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped<ProduitServices>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    "AllowSpecificOrigin",
+                    builder => builder.AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,6 +45,7 @@ namespace MedEvh
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseCors("AllowSpecificOrigin");
         }
     }
 }

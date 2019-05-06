@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessService.DataSet.DataSetTableAdapters;
 using MedEvh; 
-using Ressources.DTO;
 using MedEvh.Models;
+using MedEvh.Ressources;
+using Ressources.DTO;
 
 namespace BusinessService
 {

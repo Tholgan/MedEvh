@@ -91,7 +91,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dto\Ressources.csproj">
+    <ProjectReference Include="..\Ressources\Ressources.csproj">
       <Project>{521A24B2-4CD6-4FB6-98B5-F220D7F212B2}</Project>
       <Name>Ressources</Name>
     </ProjectReference>
