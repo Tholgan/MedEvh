@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BusinessService\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Ressources\**" />
+    <Content Remove="BusinessService\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Ressources\**" />
+    <EmbeddedResource Remove="BusinessService\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Ressources\**" />
+    <None Remove="BusinessService\**" />
+    <None Remove="Models\**" />
+    <None Remove="Ressources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="0.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.0.0" />
+    <PackageReference Include="System.Management" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="BusinessService\BusinessService.csproj" />
+    <ProjectReference Include="Models\Models.csproj" />
+  </ItemGroup>
+
+</Project>
