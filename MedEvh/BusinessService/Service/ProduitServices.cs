@@ -18,7 +18,7 @@ namespace BusinessService
         {
             ProduitTableAdapter produitTableAdapter = new ProduitTableAdapter();
             var produitDto = CopyHelper.ToDtoProduit(produitTableAdapter.GetById(id));
-            return new MedEvh.Models.ProduitModel()
+            return new ProduitModel()
             {
                 Id = produitDto.Id,
                 Libelle = produitDto.Libelle,
@@ -27,15 +27,15 @@ namespace BusinessService
 
         }
 
-        public List<MedEvh.Models.ProduitModel> GetProduits()
+        public List<ProduitModel> GetProduits()
         {
             ProduitTableAdapter produitTableAdapter = new ProduitTableAdapter();
             var produitsDto = CopyHelper.ToListDtoProduit(produitTableAdapter.GetWithTva());
-            var produitsModel = new List<MedEvh.Models.ProduitModel>();
+            var produitsModel = new List<ProduitModel>();
 
             foreach(Ressources.DTO.ProduitModel produitDto in produitsDto)
             {
-                var produitModel = new MedEvh.Models.ProduitModel()
+                var produitModel = new ProduitModel()
                 {
                     Id = produitDto.Id,
                     Libelle = produitDto.Libelle,
