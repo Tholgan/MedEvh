@@ -1,4 +1,5 @@
-﻿using Ressources.DTO;
+﻿using AutoMapper;
+using Ressources.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
