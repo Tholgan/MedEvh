@@ -19,9 +19,11 @@ namespace BusinessService.DataSet.DataSetTableAdapters
     }
 }
 
-namespace BusinessService.DataSetTableAdapters {
-    
-    
-    public partial class ProduitTableAdapter {
+namespace BusinessService.DataSet.DataSetTableAdapters
+{
+
+
+    public partial class ProduitTableAdapter
+    {
     }
 }
