@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessService.DataSet.DataSetTableAdapters;
 using MedEvh; 
-using Ressources.DTO;
 using MedEvh.Models;
+using MedEvh.Ressources;
+
 
 namespace BusinessService
 {
@@ -32,7 +33,7 @@ namespace BusinessService
             var produitsDto = CopyHelper.ToListDtoProduit(produitTableAdapter.GetWithTva());
             var produitsModel = new List<ProduitModel>();
 
-            foreach(ProduitDto produitDto in produitsDto)
+            foreach(Ressources.DTO.ProduitModel produitDto in produitsDto)
             {
                 var produitModel = new ProduitModel()
                 {

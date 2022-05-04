@@ -5,12 +5,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BusinessService\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Ressources\**" />
+    <Content Remove="BusinessService\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Ressources\**" />
+    <EmbeddedResource Remove="BusinessService\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Ressources\**" />
+    <None Remove="BusinessService\**" />
+    <None Remove="Models\**" />
+    <None Remove="Ressources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="BusinessService\BusinessService.csproj" />
+    <ProjectReference Include="Models\Models.csproj" />
   </ItemGroup>
 
 </Project>
